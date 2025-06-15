@@ -1,7 +1,3 @@
-// Copyright 2014 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 
 /// Flutter code sample for [CarouselView].
@@ -78,7 +74,7 @@ class _CarouselExampleState extends State<CarouselExample> {
             consumeMaxWeight: false,
             children: List<Widget>.generate(20, (int index) {
               return ColoredBox(
-                color: Colors.primaries[index % Colors.primaries.length].withOpacity(0.8),
+                color: Colors.primaries[index % Colors.primaries.length].withValues(alpha: 0.8),
                 child: const SizedBox.expand(),
               );
             }),
@@ -191,7 +187,7 @@ class UncontainedLayoutCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
-      color: Colors.primaries[index % Colors.primaries.length].withOpacity(0.5),
+      color: Colors.primaries[index % Colors.primaries.length].withValues(alpha: 0.5),
       child: Center(
         child: Text(
           label,
